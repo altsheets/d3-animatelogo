@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>AltSheets is studying d3 - Logo Animation</title>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/3.5.6/d3.min.js" charset="utf-8">
+// d3/d3.min.js crashes Dreamweaver, so for development use
+// d3/d3.js 
+</script>
+
+<script src="d3-transform/src/d3-transform.js" charset="utf-8">
+// would be nice if this got a URL like the above. No need for me to copy the script to local.
+// See issue https://github.com/trinary/d3-transform/issues/13
+</script>
+
+<script src="animatelogo.js" charset="utf-8">
+// here is where the magic happens 
+</script>
+
+
+<style type="text/css"></style>
+</head>
+<body>
+<h1>animatelogo.html</h1>
+<p>See sourcecode of <em>animatelogo.js</em> and <em>animatelogo.html</em> to understand what is happening. 
+
+<p>This is licensed under my <a href="http://altsheets.ddns.net/give">giveback-license-v05</a>.
+
+<input name="animate again" 
+       type="button" 
+       value="animate this again" 
+       onclick="addMyLogo.animate()" />
+
+<script>
+
+var width =  700,
+    height = 400,
+    numberOfSVGs=1; 
+
+var svg = [];
+
+// make (several) SVG(s)
+for (i=0; i<numberOfSVGs; i++){
+	svg[i] = d3.select('body').append('svg')
+       .attr('width', width)
+       .attr('height', height);
+
+	svg[i].style('background-color', 'lightyellow');
+	
+	svg[i].append('text').text('center')  
+	.style('text-anchor', 'middle')
+	.attr('x', width/2).attr('y', height/2)
+}
+
+// configure the LOGO group
+var addMyLogo = addLogo()
+		 .width(width).height(height) // size of the whole rect
+         .initialDelay(500)           // before animation starts
+         .sf(1.3)                     // speed factor, decrease for faster
+         
+         .logofilename("AltSheets_logo_180x180.png")
+         .logowidth(50).logoheight(50)
+         
+         .logoClickURL("http://altsheets.ddns.net/assetgraphs/products")
+         //.logoClickTarget("_blank")
+         
+         .fontsize(10).textbelowlogo("click to buy");
+
+// add the logo to all SVGs
+addMyLogo( d3.selectAll("svg") );
+
+// use only one SVG:
+// addMyLogo( svg[0] )
+
+</script>
+
+</body>
+</html>
