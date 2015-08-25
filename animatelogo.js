@@ -1,5 +1,5 @@
 /**
- * animatelogo.js   v01
+ * animatelogo.js   v02
  * by AltSheets
  * 
  * licensed under my   giveback-license-v05
@@ -29,6 +29,8 @@ function addLogo() {
 		  
 		  logoClickURL="http://altsheets.ddns.net/",
 		  logoClickTarget="_self",
+
+		  rightborder=0,  // useful for CSS layers
 		  
 		  lastSelection = null;  
 	      
@@ -100,7 +102,7 @@ function addLogo() {
 			  .attr('transform', d3.svg.transform().scale(0.9).translate(logocenterX*2+logowidth,0).rotate(110) )
 			  
 			.transition("logo turn to final position").duration(sf*300).ease("elastic-out")
-			  .attr('transform', d3.svg.transform().scale(1).translate(logocenterX*2,0).rotate(360) )
+			  .attr('transform', d3.svg.transform().scale(1).translate(logocenterX*2-rightborder,0).rotate(360) )
 			  
 			.transition("logo show click to buy")
 			  .select(".textbelowlogo").text(textbelowlogo);
@@ -186,6 +188,11 @@ function addLogo() {
 	  my.textbelowlogo = function(value) {
 	    if (!arguments.length) return textbelowlogo;
 	    textbelowlogo = value;
+	    return my;
+	  };
+	  my.rightborder = function(value) {
+	    if (!arguments.length) return rightborder;
+	    rightborder = value;
 	    return my;
 	  };
 	  
