@@ -19,7 +19,7 @@ http://altsheets.ddns.net/d3/animatelogo/
 
 ## @questions    
 As this is my first one, and my favorite language is Python, not JS ... I might have chosen strange ways.  
-Also, I have already formulated some issues, please see the sourcecode of [https://github.com/altsheets/d3-animatelogo/blob/master/animatelogo.html] and [https://github.com/altsheets/d3-animatelogo/blob/master/animatelogo.js].
+Also, I have already formulated some issues, please see the sourcecode of https://github.com/altsheets/d3-animatelogo/blob/master/animatelogo.html and [https://github.com/altsheets/d3-animatelogo/blob/master/animatelogo.js].
 
 
 ## @dependencies
