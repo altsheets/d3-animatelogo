@@ -1,5 +1,5 @@
 /**
- * animatelogo.js
+ * animatelogo.js   v01
  * by AltSheets
  * 
  * licensed under my   giveback-license-v05
