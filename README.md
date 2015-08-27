@@ -21,14 +21,14 @@ Clone it, and open in in your (JavaScript-enabled) browser
     firefox animatelogo.html
 
 ## @dependencies
-Would be nice if *d3-transform* got a URL home, see issue [d3-transform/issues/13](https://github.com/trinary/d3-transform/issues/13).   Until then:
+    d3.js
+    d3-transform.js
 
-    cd d3-animatelogo
-    git clone https://github.com/trinary/d3-transform
+for the amazing ["Data Driven Documents"](http://d3js.org/) JS library, and the useful [d3-transform](https://github.com/trinary/d3-transform) extension. 
     
 
 ## @author AltSheets
-Version 25/August/2015.   
+Version v03 (25/August/2015 -27/August/2015)   
 Licensed under my [giveback-license-v05](http://altsheets.ddns.net/give)  
 Please give feedback! Thanks a lot.
 
