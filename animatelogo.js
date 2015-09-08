@@ -145,11 +145,6 @@ function addLogo() {
 	    initialDelay = value;
 	    return my;
 	  };
-      my.sf = function(value) {
-	    if (!arguments.length) return sf;
-	    sf = value;
-	    return my;
-	  };
 	  my.sf = function(value) {
 	    if (!arguments.length) return sf;
 	    sf = value;
