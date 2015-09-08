@@ -29,7 +29,7 @@
 
 </head>
 <body>
-<h1>d3-animatelogo (v05) by AltSheets</h1>
+<h1>d3-animatelogo (v06) by AltSheets</h1>
 <p>See <a href="https://github.com/altsheets/d3-animatelogo" target="_blank">sourcecode</a> 
 of <em>animatelogo.js</em> and <em>animatelogo.html</em> to see what is happening.</p> 
 
@@ -63,8 +63,9 @@ for (var i=0; i < numberOfSVGs; i++){
 }
 
 // configure the LOGO group
-var addMyLogo = addLogo();
+var addMyLogo = addLogo(); // sets the defaults
 
+// overwrite the defaults with own choices:
 addMyLogo
 		 .width(width).height(height) // size of the whole rect
          .initialDelay(500)           // before animation starts
