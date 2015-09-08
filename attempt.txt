@@ -1,0 +1,47 @@
+
+Hi  javascriptissexy at (you know) gmail.com
+
+Thx for your EXCELLENT article on "this" and "that" :-)
+http://javascriptissexy.com/understand-javascripts-this-with-clarity-and-master-it/
+
+I have spent many hours, but I cannot find the flaw in my construction. 
+You are my last hope *g*
+
+
+Please compare these two outputs, visually:
+http://altsheets.ddns.net/d3/animatelogo/animatelogo.html
+http://altsheets.ddns.net/d3/animatelogo/animatelogo_attempt.html
+
+
+In the latter, I had been trying to get rid of this stupid redundancy of 12 identical getter&setter functions (*):
+https://github.com/altsheets/d3-animatelogo/blob/master/animatelogo.js#L137-L196
+
+by creating them automatically:
+https://github.com/altsheets/d3-animatelogo/blob/master/animatelogo_attempt.js#L148-L155
+
+
+BUT
+
+something does not work. 
+
+And I think it might be my lack of understanding of the this-function.
+
+Perhaps you can immediately see my flaw? 
+(I have already tried many things, with and without 'that', etc.)
+
+
+It is a strategy that I have been successfully using a lot - but in Python. 
+Now I am new to JS, and some picky details are hair tearingly different. 
+
+
+Thanks a million. And keep up the good work! Enjoy your late summer!
+
+your AltSheetsDev
+
+:-)
+
+
+
+(*) most of the code architecture is not by me but come 
+    from mike's original http://bost.ocks.org/mike/chart/
+   
