@@ -1,5 +1,5 @@
 /**
- * animatelogo.js   v02
+ * animatelogo.js   v05
  * by AltSheets
  * 
  * licensed under my   giveback-license-v05
@@ -12,68 +12,72 @@ function addLogo() {
 	// fancy logo animation
 	// clickable logo, leads to URL
 	//
-	// default values, see getters & setters below
-	// TODO: logo-centered coordinates, like ('text-anchor', 'middle') 
+	// TODO: logo-centered coordinates, like ('text-anchor', 'middle')
+	//
 	
-	  var width = 720,  // default width of the whole rect
-	      height = 500, // default height
+	// only default values, see getters & setters below
+ 	
+	  var width 		= 700,  // default width of the whole rect
+	      height 		= 500,  // default height
 	  
-	      initialDelay = 300, // before animation starts
-	      sf = 1.5,  // speed factor, decrease for faster
+	      initialDelay 	= 300,  // before animation starts
+	      sf 			= 1.5,  // speed factor, decrease for faster
 	      
-		  logofilename="AltSheets_logo_180x180.png",
-		  logowidth=50,
-		  logoheight=50,
-		  fontsize=10,
-		  textbelowlogo="click this",
+		  logofilename	= "AltSheets_logo_180x180.png",
+		  logowidth		= 50,
+		  logoheight	= 50,
+		  fontsize		= 10,
+		  textbelowlogo	= "click this",
 		  
-		  logoClickURL="http://altsheets.ddns.net/",
+		  logoClickURL	= "http://altsheets.ddns.net/",
 		  logoClickTarget="_self",
 
-		  rightborder=0,  // useful for CSS layers
+		  rightborder	= 0,    // useful for CSS layers
 		  
-		  lastSelection = null;  
+		  lastSelection = null; // hack for button "animate this again"
 	      
 	  function addLogoGroup(selection){
 		  // add the objects that are later animated
 		  
-		  lastSelection = selection  // hack for button "animate this again"
+		  lastSelection = selection;  // hack for button "animate this again"
 		  
 		  var image = new Image();
 		  image.src = logofilename;
 
 		  logoG=selection
-
 		    // whole logo group is clickable
 		    .append('svg:a')
-		    .attr("xlink:href", logoClickURL)
-		    .attr("target", logoClickTarget)
+		    .attr  ("xlink:href"	, logoClickURL)
+		    .attr  ("target"		, logoClickTarget)
 		    .append("g").classed("logogroup", true);
 
 		  logoG
 		    // text below logo
 		    .append("text").classed("textbelowlogo", true)
-		    .text("")           // empty in the beginning
-		    .style('text-anchor', 'middle')
-		    .attr('x', logowidth/2)
-		    .attr('y', logoheight+fontsize)
-		    .attr('font-size', fontsize);
+		    .text  ("")           // empty in the beginning
+		    .style ('text-anchor',	'middle')
+		    .attr  ('x', 			logowidth/2)
+		    .attr  ('y', 			logoheight+fontsize)
+		    .attr  ('font-size', 	fontsize);
 		    
 		  // add image to the group
 		  logoG
 		    .append("svg:image")
-		    .attr("xlink:href", logofilename)
-		    .attr("x", 0).attr("y", 0)
-		    .attr("height", logoheight).attr("width",  logowidth)
-		    .attr('image-rendering','optimizeQuality')
-	  }
+		    .attr  ("xlink:href", 	logofilename)
+		    .attr  ("x", 			0)
+		    .attr  ("y", 			0)
+		    .attr  ("height", 		logoheight)
+		    .attr  ("width",  		logowidth)
+		    .attr  ('image-rendering','optimizeQuality')
+	  };
 	  
 	  function animate(selection){
 		  
 		  // center of rect, minus logosize
-		  var logocenterX=(width -logowidth)/2
-		  var logocenterY=(height-logoheight)/2
+		  var logocenterX	=	(width -logowidth)	/2
+		  var logocenterY	=	(height-logoheight)	/2
 		  
+		  // show no text during animation
 		  selection.select(".logogroup").select(".textbelowlogo").text("");
 		  
 		  // chained transitions
@@ -121,7 +125,7 @@ function addLogo() {
 		  // simplistic hack for the button "animate this again" 
 		  animate(lastSelection)
 		  return my;
-	  }
+	  };
 	  
 	  // getters and setters
 	  //  
@@ -192,4 +196,4 @@ function addLogo() {
 	  };
 	  
 	  return my;
-}
+};
