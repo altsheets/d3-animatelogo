@@ -3,7 +3,7 @@ Logo animation
 with chained transitions,
 and clickable logo group.
 
-My first real D3 project (after my [quick'n'dirty hack](http://altsheets.ddns.net/assetgraphs/graph01.html) during the [nxthacks 2015](http://altsheets.ddns.net/nxthacks2015)), which have recently evolved into these [beautiful AssetGraphs-v2 products](http://altsheets.ddns.net/assetgraphs/v2/products/#product2), that I am really proud of.
+My first real D3 project (after my [quick'n'dirty hack](http://altsheets.ddns.net/assetgraphs/graph01.html) during the [nxthacks 2015](http://altsheets.ddns.net/nxthacks2015), which has recently evolved into these [beautiful AssetGraphs-v2 products](http://altsheets.ddns.net/assetgraphs/v2/products/#product2), that I am really proud of).
 
 ## @DEMO - See this animation live
 
