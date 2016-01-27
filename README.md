@@ -1,11 +1,11 @@
-# d3-animatelogo (v01)
+# d3-animatelogo (v08)
 Logo animation  
 with chained transitions,
 and clickable logo group.
 
-My first real D3 project (after my [quick'n'dirty hack](http://altsheets.ddns.net/assetgraphs/graph01.html) during the [nxthacks 2015](http://altsheets.ddns.net/nxthacks2015)).
+My first real D3 project (after my [quick'n'dirty hack](http://altsheets.ddns.net/assetgraphs/graph01.html) during the [nxthacks 2015](http://altsheets.ddns.net/nxthacks2015)), which have recently evolved into these [beautiful AssetGraphs-v2 products](http://altsheets.ddns.net/assetgraphs/v2/products/#product2), that I am really proud of.
 
-## @DEMO - See this live
+## @DEMO - See this animation live
 
 http://altsheets.ddns.net/d3/animatelogo/
 
@@ -28,7 +28,7 @@ for the amazing ["Data Driven Documents"](http://d3js.org/) JS library, and the 
     
 
 ## @author AltSheets
-Version v03 (25/August/2015 -27/August/2015)   
+Version v03 (25/August/2015 -27/August/2015), v08 (27/Jan/2016)   
 Licensed under my [giveback-license-v05](http://altsheets.ddns.net/give)  
 Please give feedback! Thanks a lot.
 

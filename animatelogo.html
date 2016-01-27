@@ -27,9 +27,9 @@
 <script charset="utf-8" type="text/javascript">
 
 
-			var VERSIONS = {   "animatelogo.html" :   "v07"   };
+			var VERSIONS = {   "animatelogo.html" :   "v08"   };
 			
-			
+
 </script>
 
 
@@ -39,7 +39,7 @@
 
 </head>
 <body>
-<h1>d3-animatelogo (v07) by AltSheets</h1>
+<h1>d3-animatelogo <span id=version></span> by AltSheets</h1>
 <p>See <a href="https://github.com/altsheets/d3-animatelogo" target="_blank">sourcecode</a> 
 of <em>animatelogo.js</em> and <em>animatelogo.html</em> to see what is happening.</p> 
 
@@ -50,6 +50,14 @@ of <em>animatelogo.js</em> and <em>animatelogo.html</em> to see what is happenin
        value=	"animate this again" 
        onclick=	"addMyLogo.animate()" />
 </p>
+
+<script type="text/javascript">
+
+// set the version number in the HTML right
+var versionTag=document.getElementById("version");
+versionTag.innerHTML="("+ VERSIONS["animatelogo.html"] + ", " + VERSIONS["animatelogo.js"] + ")";
+
+</script>
 
 <script type="text/javascript">
 
